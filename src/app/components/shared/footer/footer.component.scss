@@ -1,0 +1,87 @@
+@import '../../../../assets/mixins.scss';
+//*********************************************************************  FOOTER  **********************************************************************
+footer {
+    width: 100%;
+    background: rgba(22, 32, 68, 1);
+    
+    .wrap { 
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .bio__links ul {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+
+        li {
+            margin-right: 45px;
+        }
+    }
+
+    .terms__etc a {
+        @include fontFamily('Sora', normal, 400, 14px, 24px);
+        letter-spacing: 0em;
+        margin-right: 24px;
+        color: rgba(204, 210, 233, 1);
+        text-decoration: none;
+    }
+
+    .copyright {
+        @include fontFamily('Sora', normal, 400, 14px, 24px);
+        color: rgba(204, 210, 233, 1);
+    }
+}
+
+@include xs {
+    footer {
+        
+        .wrap {
+            padding-top: 30px;
+            padding-bottom: 0px;
+        }
+    
+        .bio__links ul {    
+            li {
+                margin-right: 5px;
+            }
+        }
+    
+        .terms__etc a {
+            display: block;
+            @include fontFamily('Sora', normal, 400, 10px, 20px);
+            margin-right: 16px;
+        }
+    
+        .copyright {
+            @include fontFamily('Sora', normal, 400, 10px, 20px);
+        }
+    }
+}
+
+@include sm {
+    footer {
+        height: 80px;
+        
+        .wrap {
+            padding-top: 30px;
+            padding-bottom: 0px;
+        }
+    
+        .bio__links ul {    
+            li {
+                margin-right: 5px;
+            }
+        }
+    
+        .terms__etc a {
+            display: block;
+            @include fontFamily('Sora', normal, 400, 10px, 20px);
+            margin-right: 16px;
+        }
+    
+        .copyright {
+            @include fontFamily('Sora', normal, 400, 10px, 20px);
+        }
+    }
+}

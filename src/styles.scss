@@ -1,1 +1,111 @@
-/* You can add global styles to this file, and also import other style files */
+@import './assets/mixins.scss';
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+body {
+    background: #FFFFFF;
+    overflow-x: hidden;
+}
+
+.wrap {
+    max-width: 1340px;
+    max-height: 1240px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.price {
+    margin-top: 12px;
+    margin-left: 50px;
+    @include fontFamily('Sora', normal, 600, 54px, 64px);
+    letter-spacing: -0.04em;
+    color: #4E5A85;
+
+    span {
+        color: #fff;
+    }
+}
+
+.features__list {
+    margin-top: 48px;
+    list-style: none;
+
+    li {
+        margin-left: 50px;
+        margin-bottom: 24px;
+        @include fontFamily('Sora', normal, 400, 16px, 24px);
+        letter-spacing: -0.01em;
+        color: #CCD2E9;
+        padding-left: 36px;
+        background: url(./assets/checkbox.svg) no-repeat;
+    }
+}
+
+.get_started {
+    margin-top: 32px;
+    width: 178px;
+    height: 64px;
+    background: #689EFF;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    // box-shadow: .1rem .1rem .2rem rgba(0, 0, 0, 0.5);
+
+    @include fontFamily('Sora', normal, 500, 16px, 24px);
+    color: #fff;
+
+    &:active {
+        background: #9dbffd
+    }
+}
+
+.arrow {
+    display: flex;
+    padding-left: 28px;
+
+    p {
+        padding-left: 12px;
+    }
+}
+
+@include xs{
+    .wrap {
+        max-width: 400px;
+    }  
+}
+
+@include sm {
+    
+
+    .price {
+        margin-top: 20px;
+        margin-left: 50px;
+        @include fontFamily('Sora', normal, 600, 48px, 31px);
+    }
+
+    .features__list {
+        margin-top: 15px;
+    }
+}
+
+@include md {
+    .wrap {
+        max-width: 920px;
+    } 
+}
+
+@include lg {
+    .wrap {
+        max-width: 1200px;
+    }
+
+    .features__list {
+        height: 310px;
+        width: 95%;
+        margin-left: -11%;
+    }
+}
