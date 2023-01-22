@@ -65,6 +65,8 @@
             background: #1513AD;
             color: #FFFFFF;
             text-decoration: none;
+            font-size: 18px;
+            line-height: 28px;
         }
 
         .show_demo_btn {
@@ -190,102 +192,51 @@
 //**************************************************************  SECTION FEATURES PAGE  **************************************************************
 
 .features {
-    margin-top: 96px;
 
     .__title {
-        @include fontFamily('Sora', normal, 600, 48px, 64px);
-        letter-spacing: -0.03em;
-        color: rgba(39, 52, 100, 1);
-    }
-
-    .__description {
-        margin-top: 16px;
-        margin-bottom: 32px;
-        width: 95%;
-        @include fontFamily('Sora', normal, 400, 20px, 32px);
+        @include fontFamily('Inter', normal, 600, 36px, 44px);
         letter-spacing: -0.02em;
-        color: rgba(126, 139, 182, 1);
+        color: #101828;
+        text-align: center;
+        margin-top: 12px;
     }
 
-    .tiny__wrap {
-        max-width: 860px;
-        margin: 0 auto;
+    .__description_first {
+        @include fontFamily('Inter', normal, 600, 16px, 24px);
+        color: #4E4D9D;
+        text-align: center;
+    }
+
+    .__description_second {
+        @include fontFamily('Inter', normal, 400, 20px, 30px);
+        color: #475467;
+        text-align: center;
+        margin-top: 20px;
+
     }
 
     .wrap {
+        margin-top: 31px;
         max-width: 860px;
-        height: 950px;
-        flex-direction: column;
-        flex-wrap: wrap;
+        display: block;
     }
 }
     
 
 @include xs {
-    .features {
-        margin-top: 20px;
-        height: 2450px;
-    
-    
-        .tiny__wrap {
-            max-width: 370px;
-            margin: 0 auto;
-        }
-    
+    .features {    
         .wrap {
             max-width: 370px;
         }    
-    }
-    .site__author {
-        margin-top: 58px;
     }
 }
 
 @include sm {
     .features {
-        margin-top: 20px;
-        height: 1500px;
-    
-    
-        .tiny__wrap {
-            max-width: 100%;
-            margin: 0 auto;
-            margin-left: 15px;
-        }
-    
         .wrap {
             max-width: 100%;
             margin-left: 15px;
         }
-    
-        .dashboard__panel {
-
-            .name__panel {
-                padding-top: 5px;
-            }
-
-            .description__panel {
-                padding-left: 18px;
-                padding-top: 10px;
-                font-size: 12px;
-            }
-
-            margin-bottom: 15px;
-            margin-right: 10px;
-            
-            width: 50%;
-            height: 300px;
-        }
-    
-        .features__promo {
-            margin-top: 15px;
-            max-width: 100%;
-            height: 328px;
-        }
-    }
-    
-    .site__author {
-        margin-top: 18px;
     }
 }
 
@@ -294,44 +245,16 @@
         width: 100%;
         margin-top: 45px;
         margin-left: 10px;
-
-        .features__promo {
-            width: 95%;
-            margin-left: -1%;
-            margin-top: 76px;
-            
-        }
-
-        .dashboard__panel {
-            margin-right: 5px;
-            margin-left: 5px;
-            
-            width: 45%;
-            height: 300px;
-        }
-
-        .tiny__wrap {
-            max-width: 100%;
-            margin: 0 auto;
-            margin-left: 15px;
-        }
-
-        .site__author {
-            margin-top: 40px;
-        }
     }
 }
 
-.how__title {
-    @include fontFamily('Sora', normal, 600, 48px, 64px);
-    text-align: center;
-    letter-spacing: -0.03em;
-    color: #273464;
-}
 //**********************************************************  SECTION PRICING PAGE  **************************************************************
 
 .price__section { 
-    margin-top: 8px;
+    margin-top: 88px;
+    .wrap {
+        justify-content: space-between;
+    }
 }
 
 @include xs {
@@ -374,62 +297,83 @@
 //*************************************************************  SECTION PROMO PAGE  ******************************************************************
 
 .promo {
-    margin-top: 172px;
+    margin-top: 118px;
     margin-bottom: 132px;
     
-    .block {
-        width: 1060px;
-        height: 176px;
-        background: #0059F7;
+    .__section {
         border-radius: 24px;
+        box-shadow: 0px 20px 24px -4px rgba(16, 24, 40, 0.08), 0px 8px 8px -4px rgba(16, 24, 40, 0.03);
         display: flex;
-        justify-content: space-around;
-        box-shadow: .1rem .1rem .2rem rgba(0, 0, 0, 0.4);
+        height: 400px;
+        background: #5654DB;
+        position: relative;
+        width: 99%;
 
-        .question {
-            @include fontFamily('Sora', normal, 500, 14px, 16px);
-            letter-spacing: 0.03em;
-            text-transform: uppercase;
-            opacity: 0.5;
-            padding-top: 50px;
-            color: #fff;
-            margin-left: -80px;
+        .promo_bg {
+            position: absolute;
+            left: 0;
+            width: 65%;
+            z-index: 0;
+
+            img {
+                border-radius: 24px;
+            }
         }
 
-        .promo__text {
-            margin-left: -80px;
+        .promo__action {
+            z-index: 1000;
+            margin-top: 94px;
+            margin-left: 64px;
+
+            .__title {
+                @include fontFamily('Inter', normal, 600, 36px, 44px);
+                letter-spacing: -0.02em;
+                color: #FFFFFF;
+            }
+
+            .__description {
+                @include fontFamily('Inter', normal, 400, 20px, 30px);
+                color: #FFFFFF;
+                margin-top: 20px;
+                width: 80%;
+            }
+
+            .action_btns {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 40px;
+                width: 70%;
+
+                button:first-child {
+                    width: 28%;
+                    height: 48px;
+                }
+
+                button:last-child {
+                    width: 69%;
+                    height: 48px;
+                    background: #1719DD;
+                    color: #FFFFFF;
+                }
+            }
         }
 
-        .get_started {
-            margin-top: 57px;
-            margin-right: -80px;
+        .promo_pic {
+            position: absolute;
+            right: 0;
+            width: 35%;
+            
+            img {
+                border-radius: 0px 24px 24px 0px;
+            }
         }
-    }
+    }    
 }
 
 @include xs {
     .promo {
         margin-left: 15px;
         margin-bottom: 20px;
-        
-        .block {
-            width: 96%;
-            height: 328px;
-            display: block;
-    
-            .question {
-                margin-left: 30px;
-            }
-    
-            .promo__text {
-                margin-left: 30px;
-            }
-    
-            .get_started {
-                margin-top: 50px;
-                margin-left: 25%;
-            }
-        }
     }
 }
 
@@ -438,27 +382,6 @@
         margin-top: 172px;
         margin-left: 15px;
         margin-bottom: 20px;
-        
-        .block {
-            width: 100%;
-            height: 228px;
-            display: block;
-    
-            .question {
-                margin-left: 30px;
-                padding-top: 30px;
-            }
-    
-            .promo__text {
-                margin-left: 30px;
-                font-size: 28px;
-            }
-    
-            .get_started {
-                margin-top: 36px;
-                margin-left: 36%;
-            }
-        }
     }
 }
 
@@ -468,33 +391,9 @@
         margin-top: 172px;
         
         margin-bottom: 30px;
-        
-        .block {
-            width: 95%;
-            height: 228px;
-            display: block;
-    
-            .question {
-                margin-left: 30px;
-                padding-top: 30px;
-            }
-    
-            .promo__text {
-                margin-left: 30px;
-            }
-    
-            .get_started {
-                margin-top: 36px;
-                margin-left: 36%;
-            }
-        }
     }
 }
 
 @include lg {
-    .promo {        
-        .block {
-            width: 95%;
-        }
-    }
+    .promo {}
 }

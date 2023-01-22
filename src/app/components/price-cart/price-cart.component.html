@@ -1,18 +1,18 @@
 <div class="price__cart">
+  <div class="wrap_fill">
     <p class="price__rate">{{ratesListik.name}}</p>
-    <p class="price">$<span>{{ratesListik.price}}</span></p>
+    <p class="price"><span>{{ratesListik.price}}</span>₽<span class="continued">{{ratesListik.description}}</span></p>
+    <p class="description">Программа с ТСН МГЭ на {{ratesListik.description}}</p>
+    <button class="__purshase">Приобрести тариф</button>
+    <button class="__more">Подробнее</button>
+  </div>
     <hr/>
-    <ul class="features__list">
+  <div class="wrap_fill">
+    <p class="opportunity">Возможности</p>
+      <ul class="features__list">
       <li>{{ratesListik.features[0]}}</li>
       <li>{{ratesListik.features[1]}}</li>
       <li>{{ratesListik.features[2]}}</li>
-      <li>{{ratesListik.features[3]}}</li>
-      <li>{{ratesListik.features[4]}}</li>
     </ul>
-    <button class="get_started">
-      <div class="arrow">
-        <p>Get Started</p>
-        <img src="../assets/features_section/arrow.svg" alt="arrow)">
-      </div>
-    </button>
   </div>
+</div>

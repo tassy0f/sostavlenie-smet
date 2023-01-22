@@ -2,34 +2,59 @@
 //*********************************************************************  FOOTER  **********************************************************************
 footer {
     width: 100%;
-    background: rgba(22, 32, 68, 1);
+    background: #1C1C30;
     
     .wrap { 
         padding-top: 50px;
         padding-bottom: 50px;
+        display: block;
     }
 
-    .bio__links ul {
+    .bio__links {
+        width: 100%;
         display: flex;
         justify-content: space-between;
-        list-style: none;
+        ul {
+            list-style: none;
+    
+            li {
+                a {
+                    text-decoration: none;
+                    color: #EAECF0;
+                    &:hover {
+                        color: #113666;
+                    }
+                }
+                @include fontFamily('Inter', normal, 600, 16px, 24px);
+                margin-bottom: 12px;
+                margin-right: 45px; 
+            }
 
-        li {
-            margin-right: 45px;
+            li:first-child {
+                @include fontFamily('Inter', normal, 600, 14px, 20px);
+                margin-bottom: 16px;
+                color: #D0D5DD;
+            }
         }
     }
 
-    .terms__etc a {
-        @include fontFamily('Sora', normal, 400, 14px, 24px);
-        letter-spacing: 0em;
-        margin-right: 24px;
-        color: rgba(204, 210, 233, 1);
-        text-decoration: none;
+    .lower_footer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    hr {
+        margin-top: 84px;
+        width: 100%;
+        background: #475467;
+        opacity: 0.16;
+        border-radius: 16px;
     }
 
     .copyright {
-        @include fontFamily('Sora', normal, 400, 14px, 24px);
-        color: rgba(204, 210, 233, 1);
+        margin-top: 35px;
+        @include fontFamily('Inter', normal, 600, 16px, 24px);
+        color: #D0D5DD;
     }
 }
 

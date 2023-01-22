@@ -2,7 +2,6 @@
   <main>
     <div class="start__page">
       <div class="wrap">
-        <!-- <img class="gradient" src="../assets/gradient.svg" alt="gradient"> -->
         <div class="start__text">
           <div>
             <p class="start_description">Простой способ заработать на сметах</p>
@@ -23,25 +22,19 @@
           </div>
         </div>
         <img class="racushka" src="../assets/racushka.svg" alt="racushka">
-      </div> 
-      
-      <div class="wrap">
-        <div class="start__dashboard">
-         
-        </div>
       </div>
     </div>
     
 
     <div class="features">
-      <div class="tiny__wrap">
-        <p class="__title">Features</p>
-        <p class="__description">Our landing page template works on all devices, so you only have to set.</p>
+      <div class="wrap">
+        <p class="__description_first">Тарифы</p>
+        <p class="__title">Тарифы помогут сэкономить</p>
+        <p class="__description_second">У нас возможности есть для каждого</p>
       </div>
     </div>
 
     <div class="price__section" id="price_carts">
-      <p class="how__title">Pricing</p>
       <div class="wrap">
         <app-price-cart *ngFor="let rate of ratesList" [ratesListik]="rate"></app-price-cart>
       </div>
@@ -49,18 +42,20 @@
 
     <div class="promo">
       <div class="wrap">
-        <div class="block">
-          <div>
-            <p class="question">READY TO START?</p>
-            <p class="promo__text">Start your free trial today!</p>
+        <div class="__section">
+          <div class="promo_bg">          
+            <img src="./assets/promo_background.svg" alt="promo-bg">
           </div>
-          <div>
-            <button class="get_started">
-              <div class="arrow">
-                <p>Get Started</p>
-                <img src="../assets/features_section/arrow.svg" alt="arrow)">
-              </div>
-            </button>
+          <div class="promo__action">
+            <p class="__title">Попробуйте Сметный офис</p>
+            <p class="__description">Присоединяйтесь к сообществу сметчиков, нас уже более 5000+ человек</p>
+            <div class="action_btns">
+              <button>Подробнее</button>
+              <button>Начать использовать Сметный офис</button>
+            </div>
+          </div>
+          <div class="promo_pic">
+            <img src="../assets/promo_pic.svg" alt="promo-picture">
           </div>
         </div>
       </div>

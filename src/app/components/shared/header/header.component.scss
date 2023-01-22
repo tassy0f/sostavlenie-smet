@@ -8,20 +8,6 @@ header {
         display: flex;
         justify-content: space-between;
         
-    } 
-
-    .header__logo {
-        display: flex;
-        padding-top: 35px;
-        padding-bottom: 40px;
-
-
-        p {
-            @include fontFamily('Inter', normal, 600, 18px, 28px);
-            letter-spacing: -0.02em;
-            margin-left: 15px;
-            color: #FFFFFF;
-        }
     }
 
     .header__menu {
@@ -37,6 +23,11 @@ header {
             letter-spacing: -0.02em;
             margin-left: 35px;
             color: #FFFFFF;
+            cursor: pointer;
+
+            &:hover {
+                color: #09083f;
+            }
         }
     }
 
@@ -45,13 +36,7 @@ header {
         justify-content: space-between;
 
         button {
-            border-radius: 8px;
-            border:none;
-            cursor: pointer;
-    
             margin-top: 28px;
-    
-            @include fontFamily('Inter', normal, 600, 18px, 28px);
         }
     
         .registr_btn {
@@ -73,7 +58,7 @@ header {
             color: #FFFFFF;
 
             &:active {
-                color: rgb(15, 60, 136);
+                color: #09083f;
             }
         }
     }
