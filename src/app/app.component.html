@@ -18,14 +18,13 @@
                 </div>
               </button>
             </a>
-            <a href="#price_carts"><button class="registr_btn">Регистрация</button></a>
+            <a href="#register"><button class="registr_btn blue_button">Регистрация</button></a>
           </div>
         </div>
         <img class="racushka" src="../assets/racushka.svg" alt="racushka">
       </div>
     </div>
     
-
     <div class="features">
       <div class="wrap">
         <p class="__description_first">Тарифы</p>
@@ -34,7 +33,7 @@
       </div>
     </div>
 
-    <div class="price__section" id="price_carts">
+    <div class="price__section">
       <div class="wrap">
         <app-price-cart *ngFor="let rate of ratesList" [ratesListik]="rate"></app-price-cart>
       </div>
@@ -51,7 +50,7 @@
             <p class="__description">Присоединяйтесь к сообществу сметчиков, нас уже более 5000+ человек</p>
             <div class="action_btns">
               <button>Подробнее</button>
-              <button>Начать использовать Сметный офис</button>
+              <button class="blue_button">Начать использовать Сметный офис</button>
             </div>
           </div>
           <div class="promo_pic">
@@ -59,6 +58,43 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="reviews">
+      <div class="wrap">
+        <div class="company_rev">
+          <img src="../assets/review_logo.svg" alt="company_rev_logo">
+          <img src="../assets/company-name-rev.svg" alt="company_rev_name">
+        </div>
+        <p class="the_review">Когда пришлось делать сразу 10 смет, я не думала что успею, но Сметный офис мне помог в этом</p>
+        <div class="author">
+          <img src="../assets/author_avatar.svg" alt="review_author_logo">
+          <p class="rev_author">Симона Ли</p>
+          <p class="rev_author_pos">Главный инженер Global Trust Investment</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="register" id="register">
+      <div class="wrap">
+        <div class="__description">
+          <p>Быстрая регистрация в Сметном офисе</p>
+          <p>Начните работу прямо сейчас</p>
+        </div>
+        <div class="forma">
+          <form #loginForm="ngForm" (ngSubmit)="register()">
+            <div>
+                <input id="name" name="name" class="text" [(ngModel)]="model.name" placeholder="Ваше имя">
+            </div>
+            <div>
+                <input type="email" id="email" name="email" class="text" [(ngModel)]="model.email" placeholder="Ваша почта">
+            </div>
+            <p class="agreement">Нажимая кнопку “Отправить” вы соглашаетесь на обработку персональных данных</p>
+            <button class="signin blue_button">Зарегестрироваться</button>
+          </form>
+        </div>
+      </div>
+      <img src="../assets/back_register.svg" alt="background">
     </div>
 
   </main>

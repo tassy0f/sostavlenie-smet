@@ -50,4 +50,16 @@ export class AppComponent implements OnInit{
       ]
     )
   ]
+
+  model: any = {}
+
+  async register() {
+    let connection = await fetch('http://localhost:3000/users', {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json;charset=utf-8'
+        },
+        body:JSON.stringify(this.model)
+    })
+  }
 }

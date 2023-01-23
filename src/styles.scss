@@ -51,6 +51,20 @@ button {
     }
 }
 
+.blue_button {
+    transition: all 0.25s ease-in-out;
+
+            &:hover {
+                background: #1719DD;
+                box-shadow: 0px 4px 35px -5px #1719DD;
+            }
+
+            &:active {
+                background: #29278a;
+                box-shadow: 0px 4px 35px -5px #29278a;
+            }
+}
+
 @include xs{
     .wrap {
         max-width: 400px;

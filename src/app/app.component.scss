@@ -298,7 +298,7 @@
 
 .promo {
     margin-top: 118px;
-    margin-bottom: 132px;
+    margin-bottom: 96px;
     
     .__section {
         border-radius: 24px;
@@ -395,5 +395,131 @@
 }
 
 @include lg {
-    .promo {}
+    
+}
+
+//*************************************************************  SECTION REVIEWS PAGE  ******************************************************************
+
+.reviews {
+    margin-bottom: 96px;
+
+    .wrap {
+        display: block;
+    }
+
+    .company_rev {
+        display: flex;
+        justify-content: space-between;
+        width: 11%;
+        margin: 0 auto;
+    }
+
+    .the_review {
+        margin-top: 32px;
+        @include fontFamily('Inter', normal, 500, 48px, 60px);
+        letter-spacing: -0.02em;
+        color: #101828;
+        text-align: center;
+        margin-bottom: 32px;
+    }
+
+    .author {
+        text-align: center;
+
+        .rev_author {
+            @include fontFamily('Inter', normal, 600, 18px, 28px);
+            color: #101828;
+            margin-top: 16px;
+        }
+
+        .rev_author_pos {
+            @include fontFamily('Inter', normal, 600, 16px, 24px);
+            color: #475467;
+            margin-top: 4px;
+        }
+    }
+}
+
+//*************************************************************  SECTION REGISTER PAGE  ******************************************************************
+
+.register {
+    position: relative;
+    background: #5654DB;
+
+    .wrap {
+        display: block;
+        z-index: 1000;
+        position: relative;
+    }
+
+    img {
+        position: absolute;
+        
+        width: 100%;
+        bottom: -56%;
+        z-index: 0;
+    }
+
+    .__description {
+        text-align: center;
+        
+
+        p:first-child {
+            padding-top: 96px;
+            @include fontFamily('Inter', normal, 500, 36px, 44px);
+            color: #FFFFFF;
+            letter-spacing: -0.02em;
+            margin-bottom: 20px;
+        }
+
+        p:last-child {
+            @include fontFamily('Inter', normal, 400, 20px, 30px);
+            color: #E9D7FE;
+            padding-bottom: 32px;
+        }
+    }
+
+    .forma {
+        margin: 0 37%;
+
+        .text {
+            padding: 10px 20px;
+            display: block;
+            height: 32px;
+            width: 88%;
+            background: #FFFFFF;
+            border: 1px solid #FFFFFF;
+            box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+            border-radius: 8px;
+        }
+          
+        .text:focus {
+            border: 1px solid #FFFFFF;
+            border-radius: 8px;
+            background: #FFFFFF;
+            outline: 0;
+        }
+    
+        input {
+            display: inline-block;
+            margin-top: 32px;
+            @include fontFamily('Inter', normal, 400, 16px, 24px);
+            color: #667085;
+        }
+
+        .agreement {
+            margin-top: 6px;
+            @include fontFamily('Inter', normal, 400, 14px, 20px);
+            color: #E9D7FE;
+        }
+
+        .signin {
+            margin-top: 16px;
+            width: 100%;
+            height: 48px;
+            color: #FFFFFF;
+            background: #1513AD;
+            margin-bottom: 96px;
+        }
+    }
 }

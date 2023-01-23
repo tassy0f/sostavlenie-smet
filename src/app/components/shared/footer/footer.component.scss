@@ -3,6 +3,8 @@
 footer {
     width: 100%;
     background: #1C1C30;
+    z-index: 3000;
+    position: relative;
     
     .wrap { 
         padding-top: 50px;
@@ -22,7 +24,7 @@ footer {
                     text-decoration: none;
                     color: #EAECF0;
                     &:hover {
-                        color: #113666;
+                        color: #667085;
                     }
                 }
                 @include fontFamily('Inter', normal, 600, 16px, 24px);
