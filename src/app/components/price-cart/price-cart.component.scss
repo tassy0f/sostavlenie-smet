@@ -173,24 +173,23 @@
 @include lg {
     .price__cart {
         width: 95%;
-        height: 640px;
 
-        hr {
-            margin-top: 25px;
-            width: 75%;
+        .price {
+            font-size: 52px;
         }
 
-        &:hover {
+        .description {
+            font-size: 14px;
+        }
+
+        .features__list {
+            li {
+                line-height: 24px;
+            }
+        }
+
+        .opportunity {
             margin-top: 0px;
-            background: rgba($color: #081131, $alpha: 0.975);
         }
-
-        .get_started {
-            margin-top: -2%;
-            margin-left: 22%;
-        }
-
-        
-        
     }
 }
