@@ -66,55 +66,114 @@ header {
     
 }
 
-@include xs{
+
+
+@include sm {
     header {
-        width: 100%;
-        height: 76px;
-    
-        hr {
-            margin-top: -20px;
+        height: 74px;
+        .wrap {
+            margin: 0 10px;
         }
-    
-        .header__logo {
-            display: flex;
-            margin-top: -15px;
-            margin-left: 10px;
-    
+        .header__options {
+            padding-top: 16px;
+            padding-bottom: 30px;
             p {
-                margin-left: 5px;
+                font-size: 7px;
+                line-height: 12px;
+                margin-left: 12px;
             }
         }
     
-        button {
-            width: 70px;
-            height: 40px;
-            margin-top: 14px;
+        .actions_buttons {
+
+            button {
+                margin-top: 8px;
+            }
+
+            .registr_btn {
+                width: 80px;
+                height: 26px;
+            }
+        
+            .login_btn {
+                width: 45px;
+                height: 26px;
+            }
+        }
+    }
+}// done
+
+@include xs{
+    header {
+        height: 30px;
+        .wrap {
+            margin: 0 10px;
+        }
+        .header__options {
+            padding-top: 16px;
+            padding-bottom: 30px;
+            p {
+                font-size: 5px;
+                line-height: 8px;
+                margin-left: 6px;
+            }
+        }
+    
+        .actions_buttons {
+
+            button {
+                margin-top: 8px;
+            }
+
+            .registr_btn {
+                width: 110%;
+                height: 20px;
+                font-size: 8px;
+                line-height: 12px;
+            }
+        
+            .login_btn {
+                width: 40px;
+                height: 20px;
+                font-size: 8px;
+                line-height: 12px;
+            }
         }
     }
 }
 
-@include sm {
+@include md {
     header {
-        height: 76px;
-    
-        hr {
-            margin-top: -20px;
+        height: 104px;
+        .wrap {
+            margin: 0 15px;
         }
-    
-        .header__logo {
-            display: flex;
-            margin-top: -15px;
-            margin-left: 10px;
-    
+        .header__options {
             p {
-                margin-left: 5px;
+                font-size: 12px;
+                line-height: 20px;
+                margin-left: 30px;
             }
         }
     
-        button {
-            width: 70px;
-            height: 40px;
-            margin-top: 14px;
+        .actions_buttons {
+            .registr_btn {
+                width: 110px;
+                height: 32px;
+            }
+        
+            .login_btn {
+                width: 80px;
+                height: 32px;
+            }
         }
     }
-}
+} // done
+
+@include lg {
+    header {
+        .wrap {
+            margin: 0 20px;
+        }
+    }
+} // done

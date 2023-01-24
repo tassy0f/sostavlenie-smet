@@ -12,7 +12,6 @@ body {
 
 .wrap {
     max-width: 1340px;
-    max-height: 1240px;
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
@@ -65,22 +64,95 @@ button {
             }
 }
 
+@include sm {
+
+    .arrow {
+        padding-left: 10px;
+        img {
+            width: 9%;
+        }
+    }
+
+    button {
+        font-size: 10px;
+        line-height: 18px;
+    }
+
+    .wrap {
+        max-width: 720px;
+    }
+
+    .header__logo {
+        img {
+            width: 20%
+        }
+
+        p {
+            font-size: 6px;
+            line-height: 12px;
+            margin-left: 6px;
+        }
+    }
+
+    header {
+        .header__logo {
+            padding-top: 16px;
+            padding-bottom: 30px;
+        }
+    }
+    
+    footer {
+        .lower_footer {
+            .header__logo {
+                padding-top: 12px;
+                padding-bottom: 10px;
+            }
+        }
+    }
+} // done
+
 @include xs{
     .wrap {
         max-width: 400px;
-    }  
-}
+    } 
+    
+    button {
+        font-size: 8px;
+        line-height: 12px;
+    }
 
-@include sm {
-    .wrap {
-        max-width: 720px;
+    .blue_button {
+        font-size: 8px;
+        line-height: 12px;
+    }
+
+    .arrow {
+        padding-left: 6px;
+
+        p{
+            padding-left: 4px;
+        }
     }
 }
 
 @include md {
+
+    button {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
     .wrap {
         max-width: 920px;
     } 
+
+    .header__logo {
+        p {
+            font-size: 8px;
+            line-height: 24px;
+            margin-left: 6px;
+        }
+    }
 }
 
 @include lg {

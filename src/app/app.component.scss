@@ -64,11 +64,60 @@
 
 }
 
-// for mobile
-@include xs {      
-    .wrap {
-        display: block;
+@include sm {
+
+    .start__page {
+        height: 100%;
+
+        .wrap {
+            width: 100%;
+        }
+    
+        .start__text {
+            h1 {
+                font-size: 28px;
+                line-height: 22px;
+            }
+            margin-top: 5px;
+        }
+    
+        .start_description {
+            font-size: 8px;
+            line-height: 10px;
+            margin-bottom: 10px;
+        }
+
+        .description_help {
+            font-size: 12px;
+            line-height: 14px;
+            margin-top: 14px;
+        }
+
+        .actions_buttons {
+            padding-left: 0%;
+            margin: 36px 0;
+
+            .show_demo_btn {
+                width: 134px;
+                height: 28px;
+                font-size: 8px;
+                line-height: 14px;
+            }
+
+            .registr_btn {
+                width: 84px;
+                height: 28px;
+                font-size: 8px;
+                line-height: 14px;
+            }
+        }
+        .racushka {
+            width: 100%;
+        }
     }
+} //done
+
+@include xs {
 
     .start__page {
         height: auto;
@@ -78,7 +127,6 @@
         }
     
         .start__text {
-            @include fontFamily('Sora', normal, 700, 55px, 66px);
             margin-top: 12px;
             margin-left: 10px;
         }
@@ -88,27 +136,24 @@
             margin-top: 13px;
             margin-left: 15px;
         }
-    }
-}
 
-@include sm {
+        .actions_buttons {
+            margin: 3px 0;
+            display: grid;
 
-    .start__page {
-        .wrap {
-            width: 100%;
-        }
+            .show_demo_btn {
+                width: 104px;
+                height: 18px;
+                font-size: 7px;
+                line-height: 10px;
+            }
 
-        height: 100%;
-    
-        .start__text {
-            @include fontFamily('Sora', normal, 700, 55px, 60px);
-            margin-top: 12px;
-            margin-left: 10px;
-        }
-    
-        .start_description {
-            margin-top: 13px;
-            margin-left: 15px;
+            .registr_btn {
+                width: 54px;
+                height: 18px;
+                font-size: 7px;
+                line-height: 10px;
+            }
         }
     }
 }
@@ -122,17 +167,37 @@
         }
     
         .start__text {
-            @include fontFamily('Sora', normal, 700, 55px, 60px);
-            margin-top: 12px;
-            margin-left: 10px;
+            h1 {
+                font-size: 62px;
+                line-height: 70px;
+            }
+            margin-top: 20px;
         }
     
         .start_description {
-            margin-top: 13px;
-            margin-left: 15px;
+            font-size: 14px;
+            line-height: 16px;
+        }
+
+        .description_help {
+            font-size: 18px;
+            line-height: 20px;
+        }
+
+        .actions_buttons {
+            padding-left: 0%;
+            margin-bottom: 86px;
+
+            .show_demo_btn {
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+        .racushka {
+            width: 100%;
         }
     }
-}
+} //done
 
 @include lg {
     
@@ -187,8 +252,7 @@
         max-width: 860px;
         display: block;
     }
-}
-    
+} 
 
 @include xs {
     .features {    
@@ -200,20 +264,37 @@
 
 @include sm {
     .features {
+
+        .__title {
+            font-size: 26px;
+            line-height: 32px;
+            margin-top: 8px;
+        }
+    
+        .__description_first {
+            font-size: 10px;
+            line-height: 14px;
+        }
+    
+        .__description_second {
+            font-size: 14px;
+            line-height: 16px;
+            margin-top: 12px;
+        }
+
         .wrap {
             max-width: 100%;
-            margin-left: 15px;
+            margin-top: 15px;
         }
     }
-}
+}// done
 
 @include md {
     .features {
         width: 100%;
         margin-top: 45px;
-        margin-left: 10px;
     }
-}
+} // done
 
 //**********************************************************  SECTION PRICING PAGE  **************************************************************
 
@@ -224,34 +305,24 @@
     }
 }
 
-@include xs {
-    .price__section{
-        height: 1865px;
-    }  
-}
-
 @include sm {
     .price__section{
-        height: 1515px;
-
+        margin-top: 28px;
         .wrap {
             flex-direction: column;
-            padding-top: 200px;
         }
     }  
-}
+}// done
 
 @include md {
     .price__section{
         margin-top: 18px;
-        height: 1650px;
 
         .wrap {
             flex-direction: column;
-            padding-top: 250px;
         }
     }  
-}
+} // done
 
 @include lg {
     .price__section{
@@ -339,29 +410,123 @@
 
 @include xs {
     .promo {
-        margin-left: 15px;
-        margin-bottom: 20px;
+        display: none;
     }
 }
 
 @include sm {
     .promo {
-        margin-top: 172px;
-        margin-left: 15px;
-        margin-bottom: 20px;
+        margin: 50px 0;
+
+        .__section {
+            width: 390px;
+            height: 116px;
+
+            .promo__action {
+                margin-top: 14px;
+                margin-left: 14px;
+
+                .__title {
+                    font-size: 14px;
+                    line-height: 14px;
+                }
+
+                .__description {
+                    font-size: 10px;
+                    line-height: 12px;
+                    margin-top: 10px;
+                    width: 60%;
+                }
+
+                .action_btns {
+                    margin-top: 12px;
+                    width: 75%;
+                    justify-content: flex-start;
+
+                    button:first-child {
+                        width: 20%;
+                        height: 24px;
+                        font-size: 7px;
+                        margin-right: 15px;
+                    }
+    
+                    button:last-child {
+                        width: 50%;
+                        height: 24px;
+                        font-size: 7px;
+                    }
+                }
+            }
+
+            .promo_bg {
+                img {
+                    width: 68.5%;
+                }
+            }
+
+            .promo_pic {
+                img {
+                    width: 100%;
+                }
+            }
+        }
     }
-}
+} // done
 
 @include md {
     
     .promo {
-        margin-top: 172px;
-        
-        margin-bottom: 30px;
+        margin-top: 55px;
+        margin-bottom: 55px;
 
-        
+        .__section {
+            width: 690px;
+            height: 204px;
+
+            .promo__action {
+                margin-top: 20px;
+                margin-left: 18px;
+
+                .__title {
+                    font-size: 25px;
+                    line-height: 23px;
+                }
+
+                .__description {
+                    font-size: 14px;
+                    line-height: 18px;
+                }
+
+                .action_btns {
+                    margin-top: 32px;
+                    width: 75%;
+
+                    button:first-child {
+                        width: 25%;
+                        height: 35px;
+                    }
+    
+                    button:last-child {
+                        width: 72%;
+                        height: 35px;
+                    }
+                }
+            }
+
+            .promo_bg {
+                img {
+                    width: 68.5%;
+                }
+            }
+
+            .promo_pic {
+                img {
+                    width: 100%;
+                }
+            }
+        }
     }
-}
+} //done
 
 @include lg {
     .promo {
@@ -396,8 +561,6 @@
                 }
             }
         }
-
-        
     }
 }      // done
 
@@ -442,6 +605,42 @@
         }
     }
 }
+
+@include xs {
+    .reviews {
+        margin-top: 20px;
+    }
+}
+
+@include sm {
+    .reviews {
+        margin-bottom: 62px;
+        .the_review {
+            font-size: 16px;
+            line-height: 30px;
+            margin: 20px 0px;
+        }
+
+        .company_rev {
+            width: 31.5%;
+        }
+    }
+} // done
+
+@include md {
+    .reviews {
+        margin-bottom: 62px;
+        .the_review {
+            font-size: 22px;
+            line-height: 36px;
+            margin: 20px 0px;
+        }
+
+        .company_rev {
+            width: 18.5%;
+        }
+    }
+} //done
 
 //*************************************************************  SECTION REGISTER PAGE  ******************************************************************
 
@@ -527,6 +726,152 @@
     }
 }
 
+@include sm {
+    .register {
+
+        img {
+            bottom: -32%;
+        }
+
+        .__description {
+
+            p:first-child {
+                font-size: 29px;
+                line-height: 32px;
+                padding-top: 56px;
+            }
+    
+            p:last-child {
+                font-size: 16px;
+                line-height: 12px;
+                padding-bottom: 18px;
+            }
+        }
+
+        .wrap {
+            .forma {
+                margin-top: 6px;
+    
+                input {
+                    height: 1px;
+                    width: 62%;
+                    font-size: 10px;
+                    line-height: 16px;
+                    margin-top: 12px;
+                }
+            }
+
+            .agreement {
+                font-size: 6px;
+                line-height: 9px;
+            }
+
+            .signin {
+                height: 28px;
+                margin-bottom: 40px;
+                font-size: 9px;
+            }
+        }
+        
+    }
+} //done
+
+@include xs {
+    .register {
+
+        img {
+            bottom: -22%;
+        }
+
+        .__description {
+
+            p:first-child {
+                font-size: 15px;
+                line-height: 14px;
+                padding-top: 24px
+            }
+    
+            p:last-child {
+                font-size: 11px;
+                line-height: 7px;
+                padding-bottom: 10px;
+            }
+        }
+
+        .wrap {
+            .forma {
+                margin-top: 6px;
+    
+                input {
+                    width: 84%;
+                    font-size: 6px;
+                    line-height: 12px;
+                    margin-top: 10px;
+                    padding: 7px 6px;
+                }
+            }
+
+            .agreement {
+                font-size: 4px;
+                line-height: 6px;
+            }
+
+            .signin {
+                height: 20px;
+                margin-bottom: 25px;
+                font-size: 6px;
+            }
+        }
+        
+    }
+}
+
+@include md {
+    .register {
+
+        img {
+            bottom: -42%;
+        }
+
+        .__description {
+
+            p:first-child {
+                font-size: 29px;
+                line-height: 32px;
+                padding-top: 56px;
+            }
+    
+            p:last-child {
+                font-size: 16px;
+                line-height: 12px;
+                padding-bottom: 18px;
+            }
+        }
+
+        .wrap {
+            .forma {
+                margin-top: 18px;
+    
+                input {
+                    height: 12px;
+                    width: 78%;
+                }
+            }
+
+            .agreement {
+                font-size: 8px;
+                line-height: 12px;
+            }
+
+            .signin {
+                height: 32px;
+                margin-bottom: 60px;
+            }
+        }
+        
+    }
+} // done
+
 @include lg {
     .register {
 
@@ -549,4 +894,4 @@
             }
         }
     }
-}
+} // done

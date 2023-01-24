@@ -60,6 +60,42 @@ footer {
     }
 }
 
+
+
+@include sm {
+    footer {
+        .wrap {
+            margin: 0 20px;
+            padding-bottom: 10px;
+        }
+
+        hr {
+            margin-top: 10px;
+        }
+
+        .bio__links {
+            ul {
+                li {
+                    font-size: 6px;
+                    line-height: 10px;
+                    margin-left: 10px;
+                }
+    
+                li:first-child {
+                    font-size: 8px;
+                    line-height: 10px;
+                }
+            }
+        }
+
+        .copyright {
+            font-size: 8px;
+            line-height: 14px;
+            margin-top: 12px;
+        }
+    }
+}//done
+
 @include xs {
     footer {
         
@@ -74,41 +110,68 @@ footer {
             }
         }
     
-        .terms__etc a {
-            display: block;
-            @include fontFamily('Sora', normal, 400, 10px, 20px);
-            margin-right: 16px;
-        }
-    
         .copyright {
-            @include fontFamily('Sora', normal, 400, 10px, 20px);
+            font-size: 5px;
+            line-height: 10px;
         }
     }
 }
 
-@include sm {
+@include md {
     footer {
-        height: 80px;
-        
         .wrap {
-            padding-top: 30px;
-            padding-bottom: 0px;
+            margin: 0 20px;
+            padding-bottom: 10px;
         }
+
+        hr {
+            margin-top: 10px;
+        }
+
+        .bio__links {
+            ul {
+                li {
+                    font-size: 12px;
+                    line-height: 18px;
+                    margin-left: 28px;
+                }
     
-        .bio__links ul {    
-            li {
-                margin-right: 5px;
+                li:first-child {
+                    font-size: 10px;
+                    line-height: 16px;
+                }
             }
         }
-    
-        .terms__etc a {
-            display: block;
-            @include fontFamily('Sora', normal, 400, 10px, 20px);
-            margin-right: 16px;
-        }
-    
+
         .copyright {
-            @include fontFamily('Sora', normal, 400, 10px, 20px);
+            font-size: 10px;
         }
     }
-}
+} // done
+
+@include lg {
+    footer {
+        .bio__links {
+            ul {
+                li {
+                    font-size: 14px;
+                    line-height: 20px;
+                    margin-left: 32px;
+                }
+    
+                li:first-child {
+                    font-size: 12px;
+                    line-height: 18px;
+                }
+            }
+        }
+
+        .lower_footer {
+            margin: 0 20px;
+        }
+
+        .copyright {
+            font-size: 12px;
+        }
+    }
+} // done

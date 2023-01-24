@@ -113,54 +113,54 @@
 @include sm {
     .price__cart {
         margin: 0 auto;
-        margin-left: 15px;
         margin-top: 22px;
-        
-        width: 97.7%;
-        height: 500px;
-
-        &:hover {
-            margin-top: 22px;
+        width: 95.7%;
+    
+        button {
+            width: 96%;
+            height: 34px;
         }
     
         hr {
-            width: 85%; 
-            margin-left: 8%;
             margin-top: 34px;
-        }
-    
-        .get_started {
-            margin-top: -1px;
         }
         
         .price__rate {
-        padding-top: 22px;
+            padding-top: 22px;
         }
-    }
+
+        .wrap_fill {
+            padding-top: 0px;
+            margin-left: 24px;
+        }
+
+        .price {
+            font-size: 44px;
+            line-height: 50px;
+        }
+        
+        .opportunity {
+            margin-top: 10px;
+        }
     
-}
+        .features__list {
+            margin-bottom: 30px;
+        }
+    }    
+} //done
 
 @include md {
     .price__cart {
         margin: 0 auto;
-        margin-left: 15px;
         margin-top: 22px;
-        
         width: 95.7%;
-        height: 550px;
 
-        &:hover {
-            margin-top: 22px;
+        button {
+            width: 96%;
         }
     
         hr {
-            width: 85%; 
-            margin-left: 8%;
             margin-top: 34px;
-        }
-    
-        .get_started {
-            margin-top: -1px;
         }
         
         .price__rate {
@@ -168,7 +168,7 @@
         }
     }
     
-}
+}  // done
 
 @include lg {
     .price__cart {
@@ -192,4 +192,4 @@
             margin-top: 0px;
         }
     }
-}
+} //done
