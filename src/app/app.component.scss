@@ -684,6 +684,12 @@
     .forma {
         margin: 0 37%;
 
+        .invalid_input {
+            color: red;
+            @include fontFamily('Inter', normal, 400, 0.7em, 14px);
+            padding-left: 7px;
+        }
+
         .text {
             padding: 10px 20px;
             display: block;
@@ -801,6 +807,12 @@
         .wrap {
             .forma {
                 margin-top: 6px;
+
+                .invalid_input {
+                    font-size: 0.1em;
+                    line-height: 1px;
+                    padding-left: 3px;
+                }
     
                 input {
                     width: 84%;

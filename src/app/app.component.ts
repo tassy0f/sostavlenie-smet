@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Rates } from './models/rates';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -51,15 +52,35 @@ export class AppComponent implements OnInit{
     )
   ]
 
+  registerForm = new FormGroup ({
+    userName: new FormControl('', [Validators.required]),
+    email: new FormControl('', [Validators.required, Validators.email])
+  })
+
+  get userName () {
+    return this.registerForm.get('userName')
+  }
+
+  get email () {
+    return this.registerForm.get('email')
+  }
+
   model: any = {}
 
   async register() {
-    let connection = await fetch('http://localhost:3000/users', {
+    let connection = await fetch('http://localhost:5000', {
         method: "POST",
         headers: {
           'Content-Type': 'application/json;charset=utf-8'
         },
-        body:JSON.stringify(this.model)
-    })
+        body:JSON.stringify(this.registerForm.value)
+      }
+    )
+    if(connection.ok === true) {
+      console.log("We send a query!");
+    } else {
+      console.log("false");
+      
+    }
   }
 }

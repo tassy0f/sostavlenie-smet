@@ -82,15 +82,17 @@
           <p>Начните работу прямо сейчас</p>
         </div>
         <div class="forma">
-          <form #loginForm="ngForm" (ngSubmit)="register()">
+          <form [formGroup]="registerForm" (ngSubmit)="register()">
             <div>
-                <input id="name" name="name" class="text" [(ngModel)]="model.name" placeholder="Ваше имя" required minlength="4">
+                <input type="text" id="name" name="name" class="text" placeholder="Ваше имя" formControlName="userName">  
+                <span *ngIf="userName && userName.invalid && userName.touched" class="invalid_input">Поле заполнено неверно</span>
             </div>
             <div>
-                <input type="email" id="email" name="email" class="text" [(ngModel)]="model.email" placeholder="Ваша почта">
+                <input type="email" id="email" name="email" class="text" placeholder="Ваша почта" formControlName="email">
+                <span *ngIf="email && email.invalid && email.touched" class="invalid_input">Поле заполнено неверно</span>
             </div>
             <p class="agreement">Нажимая кнопку “Отправить” вы соглашаетесь на обработку персональных данных</p>
-            <button type="submit" class="signin blue_button">Зарегестрироваться</button>
+            <button class="signin blue_button" [disabled]="registerForm.invalid">Зарегестрироваться</button>
           </form>
         </div>
       </div>
